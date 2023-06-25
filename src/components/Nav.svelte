@@ -1,11 +1,17 @@
 <div id="heading">
-    <h1>DOG NEWS!</h1>
+    <a href="/"><h1>DOG NEWS!</h1></a>
 </div>
 
 <style>
     #heading {
         background: white;
         width: 100%;
+    }
+    a {
+        text-decoration: none;
+    }
+    a:visited {
+        color:unset;
     }
     h1 {
         text-align: center;
