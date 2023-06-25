@@ -56,7 +56,7 @@
 
 <style>
     :global(html) {
-        font-family: "Open Sans";
+        font-family: "Open Sans", sans-serif;
     }
     body {
         height: 200vh;

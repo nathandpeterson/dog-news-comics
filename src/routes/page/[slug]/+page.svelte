@@ -4,6 +4,12 @@
     export let data;
     console.log('data', data);
 </script>
+
+<svelte:head>
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Open+Sans">
+</svelte:head>
+
 <Nav />
 
 <div class="outer-wrapper">
@@ -18,6 +24,7 @@
 <style>
     :global(body) {
         margin: 0;
+        font-family: "Open Sans", sans-serif;        
     }
     .outer-wrapper {
         display: flex;
