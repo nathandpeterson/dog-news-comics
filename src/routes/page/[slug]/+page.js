@@ -25,7 +25,6 @@ export function load({ params: { slug } }) {
             `https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dn-04/dn-p-04-01.jpg`,
             `https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dn-04/dn-p-04-02.jpg`,
             `https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dn-04/dn-p-04-03.jpg`,
-            `https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dn-04/dn-p-04-04.jpg`,
         ],
     ]
 
