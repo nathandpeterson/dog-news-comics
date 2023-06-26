@@ -52,14 +52,16 @@
         </a>
         {/each}
     </div>
+    <br />
 </body>
 
 <style>
     :global(html) {
         font-family: "Open Sans", sans-serif;
+        height: 100%;
     }
     body {
-        height: 200vh;
+        height: 100%;
         margin: 0;
         width: 100%;
         background-color: #F0FFFF;
@@ -101,7 +103,7 @@
         max-width: 300px;
         background: #B0FC38;
         border-radius: 5px;
-        color: white;
+        color: #4F7942;
         padding: 7px;
     }
 </style>
