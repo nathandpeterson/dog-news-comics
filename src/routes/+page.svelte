@@ -1,27 +1,27 @@
 <script>
     let cardData = [{
-        src: "https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dn-1-small.jpg",
+        src: "https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dn-01/dn-01-cover-400.jpg",
         href: "/page/1",
         altText: "Colorful book cover with the words Crack me up Cassie and drawing of black dog",
         bookNumber: 1,
         bookTitle: "Crack me up, Cassie!",
     },
     {
-        src: "https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dn-2-small.jpg",
+        src: "https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dn-02/dn-02-cover-400l.jpg",
         href: '/page/2',
         altText: "Colorful book cover with the words Take It Away, Tronya! and drawing of small dog",
         bookNumber: 2,
         bookTitle: "Take It Away, Tronya!"
     },
     {
-        src: "https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dn-3-small.jpg",
+        src: "https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dn-03/dn-03-cover-400.jpg",
         href: '/page/3',
         altText:"Colorful book cover with the words Hooray for Hazel! and drawing of small white dog",
         bookNumber: 3,
         bookTitle: "Hooray for Hazel!",
     },
     {
-        src: "https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dn-4-small.jpg",
+        src: "https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dn-04/dn-04-cover-400.jpg",
         href: '/page/4',
         altText:"Colorful book cover with the words Hello Hank! and drawing of small tan dog",
         bookNumber: 4,
