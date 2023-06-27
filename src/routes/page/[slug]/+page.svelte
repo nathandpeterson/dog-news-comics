@@ -1,15 +1,11 @@
 <script>
+    import Shared from '../../../components/Shared.svelte';
     import Nav from '../../../components/Nav.svelte';
      /** @type {import('./$types').PageData} */
     export let data;
-    console.log('data', data);
 </script>
 
-<svelte:head>
-    <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Open+Sans">
-</svelte:head>
-
+<Shared />
 <Nav />
 
 <div class="outer-wrapper">
@@ -22,10 +18,6 @@
 </div>
 
 <style>
-    :global(body) {
-        margin: 0;
-        font-family: "Open Sans", sans-serif;        
-    }
     .outer-wrapper {
         display: flex;
         justify-content: center;

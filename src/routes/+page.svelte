@@ -7,7 +7,7 @@
         bookTitle: "Crack me up, Cassie!",
     },
     {
-        src: "https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dn-02/dn-02-cover-400l.jpg",
+        src: "https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dn-02/dn-02-cover-400.jpg",
         href: '/page/2',
         altText: "Colorful book cover with the words Take It Away, Tronya! and drawing of small dog",
         bookNumber: 2,
@@ -30,11 +30,6 @@
     import Nav from '../components/Nav.svelte';
 </script>
 
-<svelte:head>
-    <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Open+Sans">
-</svelte:head>
-
 <body>
     <Nav />
     <div class="card-container">
@@ -56,10 +51,6 @@
 </body>
 
 <style>
-    :global(html) {
-        font-family: "Open Sans", sans-serif;
-        height: 100%;
-    }
     body {
         height: 100%;
         margin: 0;
