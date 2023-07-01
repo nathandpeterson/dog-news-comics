@@ -1,12 +1,15 @@
 <script>
+    const bucket = "https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/"
     let cardData = [{
-        src: "https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dn-01/dn-01-cover-400.jpg",
+        srcset: `${bucket}dn-01/dn-01-cover-400.jpg, ${bucket}dn-01/dn-01-cover-800.jpg 2x`,
+        src: `${bucket}dn-01/dn-01-cover-400.jpg`,
         href: "/page/1",
         altText: "Colorful book cover with the words Crack me up Cassie and drawing of black dog",
         bookNumber: 1,
         bookTitle: "Crack me up, Cassie!",
     },
     {
+        srcset: `${bucket}dn-02/dn-02-cover-400.jpg, ${bucket}dn-02/dn-02-cover-800.jpg 2x`,
         src: "https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dn-02/dn-02-cover-400.jpg",
         href: '/page/2',
         altText: "Colorful book cover with the words Take It Away, Tronya! and drawing of small dog",
@@ -14,6 +17,7 @@
         bookTitle: "Take It Away, Tronya!"
     },
     {
+        srcset: `${bucket}dn-03/dn-03-cover-400.jpg, ${bucket}dn-03/dn-03-cover-800.jpg 2x`,
         src: "https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dn-03/dn-03-cover-400.jpg",
         href: '/page/3',
         altText:"Colorful book cover with the words Hooray for Hazel! and drawing of small white dog",
@@ -21,6 +25,7 @@
         bookTitle: "Hooray for Hazel!",
     },
     {
+        srcset: `${bucket}dn-04/dn-04-cover-400.jpg, ${bucket}dn-04/dn-04-cover-800.jpg 2x`,
         src: "https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dn-04/dn-04-cover-400.jpg",
         href: '/page/4',
         altText:"Colorful book cover with the words Hello Hank! and drawing of small tan dog",
@@ -33,12 +38,15 @@
 <body>
     <Nav />
     <div class="card-container">
-        {#each cardData as { src, href,altText, bookNumber, bookTitle }}
+        {#each cardData as { src, srcset, href,altText, bookNumber, bookTitle }}
         <a href={href}>
             <div class="card">
                 <img
+                    srcset={srcset}
                     src={src}
+                    sizes={'300px'}
                     alt={altText}
+                    width={'300px'}
                 />
                 <div class="card-label">
                     <strong>Book {bookNumber}:</strong> {bookTitle}
@@ -88,7 +96,7 @@
         transition: 1s;
     }
     .card img {
-        filter: contrast(2.5) brightness(2.5);
+        filter: contrast(1) brightness(1);
     }
     .card-label {
         max-width: 300px;
