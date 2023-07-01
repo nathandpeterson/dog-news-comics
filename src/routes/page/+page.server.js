@@ -1,6 +1,6 @@
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ setHeaders }) {
     setHeaders({
-        'Cache-Control': 'max-age=31536000'
+        'cache-control': 'max-age=31536000'
     })
 }
