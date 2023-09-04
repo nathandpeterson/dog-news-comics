@@ -1,63 +1,88 @@
 <script>
     import Shared from '../../../components/Shared.svelte';
     import Nav from '../../../components/Nav.svelte';
-     /** @type {import('./$types').PageData} */
+    import { enhance } from '$app/forms';
+    import CommentForm from '../../../components/CommentForm.svelte';
+    import CommentCard from '../../../components/CommentCard.svelte';
     export let data;
+    const comments = data.comments || [];
+    let shouldShowCommentForm = false;
 </script>
 
 <Shared />
 <Nav />
 
-<div class="outer-wrapper">
 {#each data.pages as page}
-    <div class="image-container">
-        <img src={page} alt="comics"/>
-    </div>
+    <img src={page} alt="comics"/>
 {/each}
-    <a href="/">BACK</a>
+
+{#each comments as comment}
+    <CommentCard comment={comment}/>
+{/each}
+
+{#if !shouldShowCommentForm}
+<div class="add-comment-section">
+    <button
+        class="btn add-comment"
+        on:click={() => {
+            shouldShowCommentForm = true;
+        }}
+    >
+            ADD COMMENT!
+    </button>
 </div>
+{:else}
+    <!-- <CommentForm /> -->
+    <form class="image-container" method="POST" >
+        <div class="field-set">
+            <label for="username">Name</label>
+            <input type="text" id="username" name="username" />
+        </div>
+        <div class="field-set">
+            <label for="comment">Comment</label>
+            <textarea name="comment" id="comment" rows=3  />
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <button class="btn"> SUBMIT</button>
+        </div>
+    </form>
+{/if}
 
 <style>
-    .outer-wrapper {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-
-        background-color: #F0FFFF;
-    }
-
-    .image-container {
-        width: 375px;
-    }
-
-    @media (min-width: 600px) {
-        .image-container {
-        width: 600px;
-        }
-    }
-
-    @media (min-width: 900px) {
-        .image-container {
-        width: 800px;
-        }
-    }
-
-    @media (min-width: 900px) {
-        .image-container {
-        width: 800px;
-        }
-    }
-
     img {
         width: 100%;
         display: inline-block;
     }
-    a {
-        text-decoration: none;
-        color: #FF1694;
-        font-size: 20px;
+    .add-comment-section {
         margin-top: 20px;
+        display: flex;
+        justify-content: center;
     }
+    .btn {
+        padding: .5rem 1rem;
+        color: white;
+        background: magenta;
+        border: none;
+        border-radius: 7px;
+        cursor: pointer;
+        transition: all .5s;
+    }
+    .btn:hover {
+        filter: hue-rotate(-30deg);
+        transform: scale(1.2);
+    }
+    .field-set {
+        display: flex;
+        margin: 10px 0;
+    }
+    .field-set label {
+        width: 15%;
+        margin-right: 40px;
+    }
+    .field-set input {
+        width: 100%;
+    }
+    .field-set textarea {
+        width: 100%;
+    }   
 </style>
