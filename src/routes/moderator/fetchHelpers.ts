@@ -1,10 +1,17 @@
 import { createClient } from '@supabase/supabase-js';
-import { PUBLIC_SUPABASE_ANON_KEY, PUBLIC_SUPABASE_URL } from '$env/static/public';
+import { PUBLIC_SUPABASE_URL } from '$env/static/public';
 
 type fn = () => void;
 
-export async function deleteComment(commentId: string, successCallback: fn, errorCallback: fn) {
-    const client = createClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY, {
+interface ApproveOrDeleteComment {
+    apiKey: string,
+    commentId: string;
+    errorCallback: fn,
+    successCallback: fn,
+}
+
+export async function deleteComment({ apiKey, commentId, errorCallback, successCallback }: ApproveOrDeleteComment) {
+    const client = createClient(PUBLIC_SUPABASE_URL, apiKey, {
         auth: { persistSession: false }
     });
 
@@ -16,8 +23,8 @@ export async function deleteComment(commentId: string, successCallback: fn, erro
     errorCallback()
 }
 
-export async function approveComment(commentId: string, successCallback: fn, errorCallback: fn) {
-    const client = createClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY, {
+export async function approveComment({ apiKey, commentId, errorCallback, successCallback }: ApproveOrDeleteComment) {
+    const client = createClient(PUBLIC_SUPABASE_URL, apiKey, {
         auth: { persistSession: false }
     });
 

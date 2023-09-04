@@ -1,12 +1,12 @@
 <script lang="ts">
-    import { PUBLIC_MODERATOR_SECRET } from '$env/static/public'
-    export let data;
-    import CommentCard from '../../components/CommentCard.svelte';
     import Nav from '../../components/Nav.svelte';
+    import CommentCard from '../../components/CommentCard.svelte';
     import Dialog from '../../components/Dialog.svelte';
-    let comments = data.comments || [];
     import { approveComment, deleteComment } from './fetchHelpers';
     import { openDialog } from '../../utils/dialog';
+    
+    export let data;
+    let comments = data.comments || [];
 
     let isValidModerator = false;
     let password: string = '';
@@ -36,7 +36,12 @@
                                 openDialog({ dialogContent: 'SUCCESS!', shouldCloseWithTimeout: true });
                                 removeComment(comment.id);
                             }
-                            approveComment(comment.id, onSuccess, openErrorDialog)
+                            approveComment({ 
+                                apiKey: data.apiKey,
+                                commentId: comment.id,
+                                errorCallback: openErrorDialog,
+                                successCallback: onSuccess,
+                            })
                         }}
                     >
                         APPROVE
@@ -48,7 +53,12 @@
                                 openDialog({ dialogContent: 'SUCCESS!', shouldCloseWithTimeout: true });
                                 removeComment(comment.id);
                             }
-                            deleteComment(comment.id, onSuccess, openErrorDialog);
+                            deleteComment({
+                                apiKey: data.apiKey,
+                                commentId: comment.id,
+                                errorCallback: openErrorDialog,
+                                successCallback: onSuccess,
+                            });
                         }}
                     >
                         DELETE
@@ -72,7 +82,7 @@
     <form>
         <input type="password" bind:value={password} />
         <button on:click={() => {
-            if (password === PUBLIC_MODERATOR_SECRET) {
+            if (password === data.moderatorSecret) {
                 isValidModerator = true;
             }
         }}>SUBMIT</button>
