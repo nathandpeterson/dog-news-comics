@@ -2,9 +2,17 @@
 // for information about these interfaces
 declare global {
 	namespace App {
+		interface Locals {
+			supabase: SupabaseClient
+			getSession(): Promise<Session | null>
+		  }
+		  interface PageData {
+			session: Session | null
+			params: {
+				slug: string
+			}
+		  }
 		// interface Error {}
-		// interface Locals {}
-		// interface PageData {}
 		// interface Platform {}
 	}
 }

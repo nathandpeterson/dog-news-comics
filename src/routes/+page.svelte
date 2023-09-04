@@ -28,6 +28,7 @@
         bookTitle: "Hello Hank!",
     }]
     import Nav from '../components/Nav.svelte';
+    import Dialog from '../components/Dialog.svelte';
 </script>
 
 <body>
@@ -48,6 +49,7 @@
         {/each}
     </div>
     <br />
+    <Dialog />
 </body>
 
 <style>
