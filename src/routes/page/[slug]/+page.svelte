@@ -1,8 +1,7 @@
 <script>
     import Shared from '../../../components/Shared.svelte';
     import Nav from '../../../components/Nav.svelte';
-    import { enhance } from '$app/forms';
-    import CommentForm from '../../../components/CommentForm.svelte';
+    // import { enhance } from '$app/forms';
     import CommentCard from '../../../components/CommentCard.svelte';
     export let data;
     const comments = data.comments || [];
