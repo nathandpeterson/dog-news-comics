@@ -32,7 +32,7 @@
 </script>
 
 <body>
-    <Nav />
+    <Nav shouldShowDogs={true}/>
     <div class="card-container">
         {#each cardData as { src, href,altText, bookNumber, bookTitle }}
         <a href={href}>
@@ -41,9 +41,7 @@
                     src={src}
                     alt={altText}
                 />
-                <div class="card-label">
-                    <strong>Book {bookNumber}:</strong> {bookTitle}
-                </div>
+               
             </div>
         </a>
         {/each}
@@ -70,7 +68,8 @@
     @media (min-width: 750px) {
         .card-container {
             display: grid;
-            grid-template-columns: 30% 50%;
+            grid-template-columns: 30% 30%;
+            gap: 3rem;
             justify-items: center;
         }
     }
@@ -83,20 +82,12 @@
         justify-content: center;
         cursor: pointer;
         flex-direction: column;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     }
     .card:hover {
         transform: scale(1.2);
         transition: 1s;
     }
     .card img {
-        filter: contrast(2.5) brightness(2.5);
-    }
-    .card-label {
-        max-width: 300px;
-        background: #B0FC38;
-        border-radius: 5px;
-        color: #4F7942;
-        padding: 7px;
+        filter: brightness(1.15);
     }
 </style>
