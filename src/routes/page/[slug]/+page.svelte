@@ -1,11 +1,29 @@
-<script>
+<script lang="ts">
+    import { enhance } from '$app/forms';
+    import { page } from '$app/stores';
     import Shared from '../../../components/Shared.svelte';
     import Nav from '../../../components/Nav.svelte';
-    // import { enhance } from '$app/forms';
+    import Dialog from '../../../components/Dialog.svelte';
     import CommentCard from '../../../components/CommentCard.svelte';
+
+    import { openDialog } from '../../../utils/dialog';
     export let data;
     const comments = data.comments || [];
     let shouldShowCommentForm = false;
+    page.subscribe((value) => {
+        if (value.form && value.form.success) {
+            openDialog({
+                dialogContent: 'Your comment has been submitted. It may take a few days to be approved.',
+                shouldCloseWithTimeout: true
+            })
+        } else if (value.error) {
+            openDialog({
+                dialogContent: 'There was an error. Please try again later',
+                dialogTheme: 'error',
+            })
+        }
+    });
+
 </script>
 
 <Shared />
@@ -32,7 +50,9 @@
 </div>
 {:else}
     <!-- <CommentForm /> -->
-    <form class="image-container" method="POST" >
+    <Dialog />
+    <div>Your comment may take a few days to appear.</div>
+    <form class="image-container" method="POST" use:enhance>
         <div class="field-set">
             <label for="username">Name</label>
             <input type="text" id="username" name="username" />
