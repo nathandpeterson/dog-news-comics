@@ -55,12 +55,12 @@
         position: absolute;
         top: 95px;
         right: -20px;
-        visibility: hidden;
+        display: none;
     }
 
     @media (min-width: 700px) {
         .dog {
-            visibility: visible;
+            display:block;
         }
     }
 
