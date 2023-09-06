@@ -29,9 +29,11 @@
     }]
     import Nav from '../components/Nav.svelte';
     import Dialog from '../components/Dialog.svelte';
+    import Shared from '../components/Shared.svelte';
 </script>
 
 <body>
+    <Shared />
     <Nav shouldShowDogs={true}/>
     <div class="card-container">
         {#each cardData as { src, href,altText, bookNumber, bookTitle }}
