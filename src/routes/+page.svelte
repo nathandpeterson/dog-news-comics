@@ -57,7 +57,7 @@
         height: 100%;
         margin: 0;
         width: 100%;
-        background-color: #F0FFFF;
+        background-image: url(https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dog-bones.jpg);
     }
     .card-container {
         display: flex;
