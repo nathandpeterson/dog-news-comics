@@ -4,6 +4,7 @@
     import Dialog from '../../components/Dialog.svelte';
     import { approveComment, deleteComment } from './fetchHelpers';
     import { openDialog } from '../../utils/dialog';
+    import { cardData } from '../../data/cards';
     
     export let data;
     let comments = data.comments || [];
@@ -20,6 +21,10 @@
             dialogTheme: 'error',
         })
     }
+    function getBookTitleFromPageId (pageId: number) {
+        const bookData = cardData.find(card => card.bookNumber === Number(pageId))
+        return bookData?.bookTitle || 'unknown'
+    }
 </script>
 <Nav />
 <Dialog />
@@ -27,6 +32,7 @@
 {#if isValidModerator}
     <form class="container">
         {#each comments as comment}
+            <div><strong>Book {comment.page_id}</strong> –– {getBookTitleFromPageId(comment.page_id)}</div>
             <div class="comment-section">
                 <div class="controls">
                     <button
