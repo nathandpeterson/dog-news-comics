@@ -39,11 +39,14 @@ export async function load({ params: { slug } }) {
     const client = createClient(PUBLIC_SUPABASE_URL, PRIVATE_SUPABASE_ANON_KEY, {
         auth: { persistSession: false }
     })
-    const { data } = await client.from('comments').select('*');
-    const pageComments = data?.filter(c => c.page_id === slug)
-        .filter(c => c.is_approved === true);
+    const { data } = await client.from('comments')
+        .select('*')
+        .eq('is_approved', 'true')
+        .eq('page_id', slug)
+        .order('created_at', { ascending: false });
+        
     return {
-        comments: pageComments,
+        comments: data,
         pages,
     }
 }
