@@ -1,10 +1,42 @@
 <script lang="ts">
+    import { onMount } from "svelte";
+
     export let shouldShowDogs: boolean = false;
+    let isHoveringHeading = false;
+    let anchorRef: HTMLAnchorElement;
+
+    onMount(() => {
+        // let spin animation complete before removing animation class
+        anchorRef.addEventListener('animationiteration', (e: AnimationEvent) => {
+            if (isHoveringHeading === false) {
+                if (e && e.target instanceof HTMLElement) {
+                    e.target.classList.remove('hovered')
+                }
+            }
+        })
+    })
+   
+    function onHoverHeading(e: MouseEvent){
+        isHoveringHeading = true;
+        if (e && e.target instanceof HTMLElement) {
+            e.target.classList.add('hovered')
+        }
+    }
+
+    function onMouseLeave() {
+        isHoveringHeading = false;
+    }
 </script>
 
 <div id="heading">
     <span>🐶</span>
-    <a href="/"><h1>DOG NEWS!</h1></a>
+    <a  href="/"
+        bind:this={anchorRef}
+        on:mouseenter={onHoverHeading}
+        on:mouseleave={onMouseLeave}
+    >
+        <h1>DOG NEWS!</h1>
+    </a>
     <span>🐶</span>
 </div>
 {#if shouldShowDogs}
@@ -38,9 +70,6 @@
         margin: 0;
         padding: 20px 0;
         cursor: pointer;
-    }
-    h1:hover {
-        animation: title-animation .5s infinite linear;
     }
         
     @keyframes title-animation {
@@ -87,6 +116,8 @@
         100% {
             right: 120%
         }
-
+    }
+    :global(.hovered) {
+        animation: title-animation .5s infinite linear;
     }
 </style>
