@@ -25,4 +25,12 @@ export const cardData = [{
         altText:"Colorful book cover with the words Hello Hank! and drawing of small tan dog",
         bookNumber: 4,
         bookTitle: "Hello Hank!",
-    }]
+    },
+    {
+        src: "https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dn-05/dn-05-cover-400.JPG",
+        href: '/page/5',
+        altText:"Colorful book cover with the words Salutations Stewert! and drawing of small tan dog",
+        bookNumber: 5,
+        bookTitle: "Salutations Stewert!",
+    },
+]
