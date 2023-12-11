@@ -71,6 +71,11 @@ export const actions = {
             comment_text: comment,
         }])
 
+        await fetch('https://ntfy.sh/dognews', {
+            method: 'POST',
+            body: `New comment from ${username}`
+        })
+
         return { success: true };
     }
 };
