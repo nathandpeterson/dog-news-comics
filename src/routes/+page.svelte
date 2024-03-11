@@ -1,5 +1,6 @@
 <script>
     import { cardData } from '../data/cards';
+    import { openDialog } from '../utils/dialog';
     import Nav from '../components/Nav.svelte';
     import Dialog from '../components/Dialog.svelte';
     import Shared from '../components/Shared.svelte';
@@ -21,7 +22,11 @@
         </a>
         {/each}
     </div>
-    <br />
+    <footer>
+        <span>🐶</span>
+        <a href="/subscribe">SUBSCRIBE TO DOGNEWS!</a>
+        <span>🐶</span>
+    </footer>
     <Dialog />
 </body>
 
@@ -64,5 +69,31 @@
     }
     .card img {
         filter: brightness(1.15);
+    }
+    footer {
+        width: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    footer a {
+        background-color: red;
+        padding: 20px 40px;
+        margin: 40px 0;
+        font-size: 1.5rem;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+    }
+    footer a:hover {
+        transform: scale(120%);
+        font-size: 2rem;
+        transition: .5s;
+    }
+    footer span {
+        font-size: 5rem;
     }
 </style>
