@@ -38,6 +38,7 @@
         <h1>DOG NEWS!</h1>
     </a>
     <span>🐶</span>
+    <a id="photos-link" href="/photos">PHOTOS</a>
 </div>
 {#if shouldShowDogs}
     <span class="dog cassie">🐕‍🦺</span>
@@ -53,6 +54,12 @@
         align-items: center;
         justify-content: center;
         box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        position: relative;
+    }
+    #photos-link {
+        position: absolute;
+        right: 10%;
+        color: #FF1694;
     }
     #heading span {
         font-size: 50px;
@@ -92,7 +99,6 @@
             display:block;
         }
     }
-
     .cassie {
         animation: march 22s infinite cubic-bezier(0.175, 0.885, 0.32, 1.275);
         animation-delay: 12s;

@@ -1,6 +1,5 @@
 <script>
     import { cardData } from '../data/cards';
-    import { openDialog } from '../utils/dialog';
     import Nav from '../components/Nav.svelte';
     import Dialog from '../components/Dialog.svelte';
     import Shared from '../components/Shared.svelte';
@@ -33,6 +32,7 @@
 <style>
     body {
         height: 100%;
+        min-height: 90vh;
         margin: 0;
         width: 100%;
         background-image: url(https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dog-bones.jpg);
