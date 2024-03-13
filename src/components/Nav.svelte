@@ -1,9 +1,11 @@
 <script lang="ts">
     import { onMount } from "svelte";
+    import { page } from '$app/stores';  
 
     export let shouldShowDogs: boolean = false;
     let isHoveringHeading = false;
     let anchorRef: HTMLAnchorElement;
+    let shouldShowPhotosLinks = false;
 
     onMount(() => {
         // let spin animation complete before removing animation class
@@ -14,6 +16,9 @@
                 }
             }
         })
+        if ($page.route.id === '/') {
+            shouldShowPhotosLinks = true;
+        }
     })
    
     function onHoverHeading(e: MouseEvent){
@@ -28,17 +33,21 @@
     }
 </script>
 
-<div id="heading">
-    <span>🐶</span>
-    <a  href="/"
-        bind:this={anchorRef}
-        on:mouseenter={onHoverHeading}
-        on:mouseleave={onMouseLeave}
-    >
-        <h1>DOG NEWS!</h1>
-    </a>
-    <span>🐶</span>
-    <a id="photos-link" href="/photos">PHOTOS</a>
+<div id="heading-container">
+    <div id="heading">
+        <span>🐶</span>
+        <a  href="/"
+            bind:this={anchorRef}
+            on:mouseenter={onHoverHeading}
+            on:mouseleave={onMouseLeave}
+        >
+            <h1>DOG NEWS!</h1>
+        </a>
+        <span>🐶</span>
+    </div>
+    {#if shouldShowPhotosLinks === true}
+        <a id="photos-link" href="/photos">PHOTOS</a>
+    {/if}
 </div>
 {#if shouldShowDogs}
     <span class="dog cassie">🐕‍🦺</span>
@@ -47,19 +56,40 @@
 
 
 <style>
+    #heading-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
     #heading {
         background: white;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-        position: relative;
     }
     #photos-link {
         position: absolute;
+        display: block;
         right: 10%;
         color: #FF1694;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    @media (max-width: 400px) {
+        #photos-link {
+            position: relative;
+            display: block;
+            text-align: center;
+            right: unset;
+            background-color: #FF1694;
+            color: white;
+            width: fit-content;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
     }
     #heading span {
         font-size: 50px;
@@ -75,7 +105,6 @@
         color: #FF1694;
         font-size: 4rem;
         margin: 0;
-        padding: 20px 0;
         cursor: pointer;
     }
         
