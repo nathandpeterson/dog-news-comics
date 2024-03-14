@@ -75,8 +75,13 @@
         display: block;
         right: 10%;
         color: #FF1694;
-        padding: 5px;
+        padding: 5px 7px;
         border-radius: 5px;
+        border: 1px solid #FF1694;
+    }
+    #photos-link:hover {
+        transform: scale(1.8);
+        transition: .6s;
     }
     @media (max-width: 400px) {
         #photos-link {
