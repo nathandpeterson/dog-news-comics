@@ -83,7 +83,7 @@
         transform: scale(1.8);
         transition: .6s;
     }
-    @media (max-width: 400px) {
+    @media (max-width: 500px) {
         #photos-link {
             position: relative;
             display: block;
