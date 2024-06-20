@@ -47,4 +47,12 @@ export const cardData = [
     bookNumber: 6,
     bookTitle: "Make It Move Montana!",
   },
+  {
+    src: "https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dn-07/dn-07-cover.JPG",
+    href: "/page/7",
+    altText:
+      "Colorful book cover with the words Cassie Makes a Crash! and drawing of two dogs",
+    bookNumber: 7,
+    bookTitle: "Cassie Makes a Crash!",
+  },
 ];
