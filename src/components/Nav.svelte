@@ -48,12 +48,11 @@
     {#if shouldShowPhotosLinks === true}
         <a id="photos-link" href="/photos">PHOTOS</a>
     {/if}
+    {#if shouldShowDogs}
+        <span class="dog cassie">🐕‍🦺</span>
+        <span class="dog tronia">🐕</span>
+    {/if}
 </div>
-{#if shouldShowDogs}
-    <span class="dog cassie">🐕‍🦺</span>
-    <span class="dog tronia">🐕</span>
-{/if}
-
 
 <style>
     #heading-container {
@@ -66,6 +65,7 @@
     #heading {
         background: white;
         width: 100%;
+        min-height: 120px;
         display: flex;
         align-items: center;
         justify-content: center;
