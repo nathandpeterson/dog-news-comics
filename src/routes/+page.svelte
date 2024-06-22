@@ -49,15 +49,28 @@
         display: flex;
         justify-content: center;
     }
+    .event-image img {
+        width: 300px;
+    }
+    @media screen and (min-width: 400px) {
+        .event-image img {
+            width: 500px;
+        }
+    }
+    @media screen and (min-width: 700px) {
+        .event-image img {
+            width: 700px;
+        }
+    }
     .card-container {
         display: flex;
         flex-direction: column;
-        gap: 100px 0;
+        gap: 100px 50px;
         justify-content: center;
         align-items: center;
         margin-top: 40px;
     }
-    @media (min-width: 750px) {
+    @media screen and (min-width: 840px) {
         .card-container {
             display: grid;
             grid-template-columns: 30% 30%;
