@@ -8,6 +8,13 @@
 <body>
     <Shared />
     <Nav shouldShowDogs={true}/>
+    <br />
+    <div class="event-image">
+        <img 
+            alt="Advertisement for Dog News Zine Fest - Friday July 12th @ 5:30pm - 8314 19th Ave NW"
+            src="https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dog-news-flyer.JPG"
+        />
+    </div>
     <div class="card-container">
         {#each cardData as { src, href,altText }}
         <a href={href}>
@@ -36,6 +43,11 @@
         margin: 0;
         width: 100%;
         background-image: url(https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dog-bones.jpg);
+    }
+    .event-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
     .card-container {
         display: flex;
