@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { enhance } from '$app/forms';
     import Nav from '../../components/Nav.svelte';
     import Shared from '../../components/Shared.svelte';
     let hasSubmitted = false;
@@ -10,11 +11,11 @@
         {#if !hasSubmitted}
          <span> 
             <h1>SUBSCRIBE TO DOG NEWS!</h1>
-            <form on:submit={() => {
+            <form method="POST" use:enhance on:submit={() => {
                 hasSubmitted = true;
             }}>
                 <label for="email">EMAIL</label>
-                <input type="email" id="email">
+                <input type="email" name="email" id="email">
             </form>
         </span>
         {:else}
