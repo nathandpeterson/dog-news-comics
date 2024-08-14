@@ -55,4 +55,12 @@ export const cardData = [
     bookNumber: 7,
     bookTitle: "Cassie Makes a Crash!",
   },
+  {
+    src: "https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dn-08/dn-08-cover.JPG",
+    href: "/page/8",
+    altText:
+      "Colorful book cover with the words Make the Truce, Tranya! and drawing of a frowning dog",
+    bookNumber: 8,
+    bookTitle: "Make the Truce, Tranya!",
+  },
 ];
