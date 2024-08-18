@@ -63,4 +63,12 @@ export const cardData = [
     bookNumber: 8,
     bookTitle: "Make the Truce, Tranya!",
   },
+  {
+    src: "https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dn-09/dn-09-cover.JPG",
+    href: "/page/9",
+    altText:
+      "Colorful book cover with the words Make the Hallelujah, Hazel! and drawing of a happy white dog",
+    bookNumber: 9,
+    bookTitle: "Hallelujah, Hazel!",
+  },
 ];
