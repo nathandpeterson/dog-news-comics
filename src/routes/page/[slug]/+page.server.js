@@ -36,6 +36,12 @@ export async function load({ params: { slug } }) {
     [`${BASE_URL}/dn-07/dn-p-07-01.JPG`, `${BASE_URL}/dn-07/dn-p-07-02.JPG`],
     [`${BASE_URL}/dn-08/dn-p-08-01.JPG`, `${BASE_URL}/dn-08/dn-p-08-02.JPG`],
     [`${BASE_URL}/dn-09/dn-p-09-01.JPG`, `${BASE_URL}/dn-09/dn-p-09-02.JPG`],
+    [
+      `${BASE_URL}/dn-10/dn-p-10-01.JPG`,
+      `${BASE_URL}/dn-10/dn-p-10-02.JPG`,
+      `${BASE_URL}/dn-10/dn-p-10-03.JPG`,
+      `${BASE_URL}/dn-10/dn-p-10-04.JPG`,
+    ],
   ];
 
   const issueNumber = Number(slug);
