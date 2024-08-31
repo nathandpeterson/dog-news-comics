@@ -17,7 +17,7 @@
             <Bubble bubbleText="Hello, my name is Tranya"/>
         </DogCard>
         <DogCard animation="wobble" background="car" imgSrc={BASE_URL + '/cutouts/ellie-cutout-sm.png'}>
-            <Bubble bubbleText="Hello, my name is Tranya"/>
+            <Bubble bubbleText="Hello, my name is Ellie"/>
         </DogCard>
         <DogCard animation="spin" background="beach" imgSrc={BASE_URL + '/cutouts/stewie-cutout-sm.png'} imageStyle="top: 65px;">
             <Bubble bubbleText="Cowabunga, I'm Stewie!" top={'60%'}/>

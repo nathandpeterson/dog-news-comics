@@ -92,8 +92,9 @@
             right: unset;
             background-color: #FF1694;
             color: white;
+            padding: 10px 30px;
             width: fit-content;
-            margin-top: 5px;
+            margin-top: 25px;
             margin-bottom: 10px;
         }
     }
