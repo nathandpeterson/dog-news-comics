@@ -8,9 +8,14 @@
 <style>
     :global(html) {
         height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
     :global(body) {
         margin: 0;
+        padding: 0;
+        width: 100%;
         font-family: "Open Sans", sans-serif;        
     }
 </style>

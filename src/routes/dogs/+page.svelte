@@ -5,11 +5,9 @@
     import Bubble from '../../components/Bubble.svelte';
     const BASE_URL = 'https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev';
 </script>
-
-<body>
+<div>
     <Shared />
     <Nav shouldShowDogs={false}/>
-    <hr />
     <div class="spacer" />
     <div class="container">
         <DogCard animation="shake" background="yard" imgSrc={BASE_URL + '/cutouts/cassie-cutout-sm.png'}>
@@ -37,13 +35,17 @@
         <DogCard animation="wobble" background="office" imgSrc={BASE_URL + '/cutouts/montana-cutout.png'} imageStyle="max-height: 300px;">
             <Bubble bubbleText="Hi, I'm Montana!" top="40%"/>
         </DogCard>
-        <div class="spacer">
-        <div class="spacer">
-        </div>
+        <div class="spacer"/>
     </div>
-</body>
-
-<style>
+</div>
+<style global>
+    :global(body) {
+        height: 100%;
+        min-height: 90vh;
+        margin: 0;
+        width: 100%;
+        background-image: url(https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dog-bones.jpg);
+    }
     .container {
         width: 100%;
         height: 100%;
@@ -52,8 +54,13 @@
         align-content: center;
         justify-content: center;
         gap: 50px;
-        padding: 0 30px;
+  
         margin-bottom: 50px;
+    }
+    @media (min-width: 500px){
+        .container {
+            padding: 0 30px;
+        }
     }
 
     .spacer {
