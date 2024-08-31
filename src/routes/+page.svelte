@@ -9,6 +9,9 @@
     <Shared />
     <Nav shouldShowDogs={true}/>
     <br />
+    <div class="button-container">
+        <a href="/dogs"><button> MEET THE DOGS</button></a>
+    </div>
     <div class="card-container">
         {#each cardData as { src, href,altText }}
         <a href={href}>
@@ -37,6 +40,23 @@
         margin: 0;
         width: 100%;
         background-image: url(https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dog-bones.jpg);
+    }
+    .button-container {
+        display: flex;
+        justify-content: center;;
+    }
+    button {
+        background: #FF1694;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        transition: .5s all;
+    }
+    button:hover {
+        transform: scale(1.1);
     }
     .card-container {
         display: flex;
