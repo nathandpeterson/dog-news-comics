@@ -76,9 +76,11 @@
         display: block;
         right: 10%;
         color: #FF1694;
-        padding: 5px 7px;
+        padding: 7px;
         border-radius: 5px;
         border: 1px solid #FF1694;
+        font-size: 36px;
+        font-weight: 500;
     }
     #photos-link:hover {
         transform: scale(1.8);
@@ -95,6 +97,7 @@
             padding: 10px 30px;
             width: fit-content;
             margin-top: 25px;
+            font-size: 30px;
             margin-bottom: 10px;
         }
     }
