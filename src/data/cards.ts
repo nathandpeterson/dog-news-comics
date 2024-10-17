@@ -79,4 +79,12 @@ export const cardData = [
     bookNumber: 10,
     bookTitle: "What the Heck, Hank!",
   },
+  {
+    src: "https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dn-11/dn-11-cover.JPG",
+    href: "/page/11",
+    altText:
+      "Colorful book cover with the words Arch it Up Ellie! and drawing of two dogs.",
+    bookNumber: 10,
+    bookTitle: "Arch it Up, Ellie!",
+  },
 ];
