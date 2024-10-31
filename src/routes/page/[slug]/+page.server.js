@@ -10,9 +10,9 @@ export async function load({ params: { slug } }) {
     .fill(0)
     .map(
       (_, i) =>
-        `${BASE_URL}/dn-halloween/dn-halloween-${i < 10 ? "0" : ""}${i + 1}.JPG`
+        `${BASE_URL}/dn-halloween/dn-halloween-${i < 9 ? "0" : ""}${i + 1}.JPG`
     );
-
+  console.log(" halloweenPages", halloweenPages);
   const issues = {
     halloween: halloweenPages,
     1: [
