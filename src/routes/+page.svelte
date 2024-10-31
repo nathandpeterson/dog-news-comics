@@ -3,6 +3,7 @@
     import Nav from '../components/Nav.svelte';
     import Dialog from '../components/Dialog.svelte';
     import Shared from '../components/Shared.svelte';
+    const BASE_URL = 'https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev';
 </script>
 
 <body>
@@ -12,6 +13,16 @@
     <div class="button-container">
         <a href="/dogs"><button> MEET THE DOGS</button></a>
     </div>
+    <div class="center">
+        <a href="/page/halloween">
+            <div class="card">
+                <img
+                    src={`${BASE_URL}/dn-halloween/dn-halloween-cover.JPG`}
+                    alt="dog1"
+                />
+            </div>
+        </a>
+    </div>    
     <div class="card-container">
         {#each cardData as { src, href,altText }}
         <a href={href}>
@@ -117,4 +128,10 @@
     footer span {
         font-size: 5rem;
     }
+    .center {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
 </style>
