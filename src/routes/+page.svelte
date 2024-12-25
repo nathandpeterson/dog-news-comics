@@ -14,6 +14,16 @@
         <a href="/dogs"><button> MEET THE DOGS</button></a>
     </div>
     <div class="center">
+        <a href="/page/christmas">
+            <div class="card">
+                <img
+                    src={`${BASE_URL}/dn-christmas/dn-xmas-cover.JPG`}
+                    alt="dog2"
+                />
+            </div>
+        </a>
+    </div>    
+    <div class="center">
         <a href="/page/halloween">
             <div class="card">
                 <img

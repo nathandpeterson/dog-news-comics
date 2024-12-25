@@ -12,8 +12,15 @@ export async function load({ params: { slug } }) {
       (_, i) =>
         `${BASE_URL}/dn-halloween/dn-halloween-${i < 9 ? "0" : ""}${i + 1}.JPG`
     );
-  console.log(" halloweenPages", halloweenPages);
+  const christmasPages = new Array(14)
+    .fill(0)
+    .map(
+      (_, i) =>
+        `${BASE_URL}/dn-christmas/dn-xmas-${i < 9 ? "0" : ""}${i + 1}.JPG`
+    );
+
   const issues = {
+    christmas: christmasPages,
     halloween: halloweenPages,
     1: [
       `${BASE_URL}/dn-01/dn-p-01-01.jpg`,
