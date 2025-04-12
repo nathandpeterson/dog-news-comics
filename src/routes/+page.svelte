@@ -13,26 +13,9 @@
     <div class="button-container">
         <a href="/dogs"><button> MEET THE DOGS</button></a>
     </div>
-    <div class="center">
-        <a href="/page/christmas">
-            <div class="card">
-                <img
-                    src={`${BASE_URL}/dn-christmas/dn-xmas-cover.JPG`}
-                    alt="dog2"
-                />
-            </div>
-        </a>
-    </div>    
-    <div class="center">
-        <a href="/page/halloween">
-            <div class="card">
-                <img
-                    src={`${BASE_URL}/dn-halloween/dn-halloween-cover.JPG`}
-                    alt="dog1"
-                />
-            </div>
-        </a>
-    </div>    
+   <div class="center flyer">
+        <img src={`${BASE_URL}/dn-zinefest-2025.JPG`} alt="Flier for DogNews ZineFest 2025"/>
+   </div>
     <div class="card-container">
         {#each cardData as { src, href,altText }}
         <a href={href}>
@@ -45,6 +28,26 @@
             </div>
         </a>
         {/each}
+        <div class="center">
+            <a href="/page/christmas">
+                <div class="card">
+                    <img
+                        src={`${BASE_URL}/dn-christmas/dn-xmas-cover.JPG`}
+                        alt="dog2"
+                    />
+                </div>
+            </a>
+        </div>    
+        <div class="center">
+            <a href="/page/halloween">
+                <div class="card">
+                    <img
+                        src={`${BASE_URL}/dn-halloween/dn-halloween-cover.JPG`}
+                        alt="dog1"
+                    />
+                </div>
+            </a>
+        </div>    
     </div>
     <footer>
         <span>🐶</span>
@@ -143,5 +146,4 @@
         justify-content: center;
         margin-top: 20px;
     }
-
 </style>
