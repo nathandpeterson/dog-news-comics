@@ -146,4 +146,7 @@
         justify-content: center;
         margin-top: 20px;
     }
+    .flyer img {
+        width: 100%;
+    }
 </style>
