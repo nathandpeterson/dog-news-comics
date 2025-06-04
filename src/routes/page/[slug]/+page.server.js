@@ -61,6 +61,20 @@ export async function load({ params: { slug } }) {
       `${BASE_URL}/dn-11/dn-p-11-02.JPG`,
       `${BASE_URL}/dn-11/dn-p-11-03.JPG`,
     ],
+    12: [
+      `${BASE_URL}/dn-12/dn-12-01.JPG`,
+      `${BASE_URL}/dn-12/dn-12-02.JPG`,
+      `${BASE_URL}/dn-12/dn-12-03.JPG`,
+      `${BASE_URL}/dn-12/dn-12-04.JPG`,
+    ],
+    13: [
+      `${BASE_URL}/dn-13/dn-13-01.JPG`,
+      `${BASE_URL}/dn-13/dn-13-02.JPG`,
+      `${BASE_URL}/dn-13/dn-13-03.JPG`,
+      `${BASE_URL}/dn-13/dn-13-04.JPG`,
+      `${BASE_URL}/dn-13/dn-13-05.JPG`,
+      `${BASE_URL}/dn-13/dn-13-06.JPG`,
+    ],
   };
 
   const pages = issues[slug];

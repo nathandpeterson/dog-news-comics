@@ -146,7 +146,16 @@
         justify-content: center;
         margin-top: 20px;
     }
+    .flyer {
+        width: 100%;
+    }
+ 
     .flyer img {
         width: 100%;
+    }
+    @media screen and (min-width: 540px) {
+        .flyer img {
+            width: 50%;
+        }
     }
 </style>

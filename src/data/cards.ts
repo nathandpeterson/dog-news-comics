@@ -87,4 +87,20 @@ export const cardData = [
     bookNumber: 10,
     bookTitle: "Arch it Up, Ellie!",
   },
+  {
+    src: "https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dn-12/dn-12-cover.JPG",
+    href: "/page/12",
+    altText:
+      "Colorful book cover with the words Set the Scene Stewie! and drawing of a small dog.",
+    bookNumber: 10,
+    bookTitle: "Set the Scene, Stewie!",
+  },
+  {
+    src: "https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dn-13/dn-13-cover.JPG",
+    href: "/page/13",
+    altText:
+      "Colorful book cover with the words Marvelous Mikey! and drawing of a cat.",
+    bookNumber: 10,
+    bookTitle: "Marvelous Mikey!",
+  },
 ];
