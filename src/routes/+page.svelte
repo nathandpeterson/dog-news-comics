@@ -13,9 +13,6 @@
     <div class="button-container">
         <a href="/dogs"><button> MEET THE DOGS</button></a>
     </div>
-   <div class="center flyer">
-        <img src={`${BASE_URL}/dn-zinefest-2025.JPG`} alt="Flier for DogNews ZineFest 2025"/>
-   </div>
     <div class="card-container">
         {#each cardData as { src, href,altText }}
         <a href={href}>
