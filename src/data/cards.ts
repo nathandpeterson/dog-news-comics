@@ -84,7 +84,7 @@ export const cardData = [
     href: "/page/11",
     altText:
       "Colorful book cover with the words Arch it Up Ellie! and drawing of two dogs.",
-    bookNumber: 10,
+    bookNumber: 11,
     bookTitle: "Arch it Up, Ellie!",
   },
   {
@@ -92,7 +92,7 @@ export const cardData = [
     href: "/page/12",
     altText:
       "Colorful book cover with the words Set the Scene Stewie! and drawing of a small dog.",
-    bookNumber: 10,
+    bookNumber: 12,
     bookTitle: "Set the Scene, Stewie!",
   },
   {
@@ -100,7 +100,15 @@ export const cardData = [
     href: "/page/13",
     altText:
       "Colorful book cover with the words Marvelous Mikey! and drawing of a cat.",
-    bookNumber: 10,
+    bookNumber: 13,
     bookTitle: "Marvelous Mikey!",
+  },
+  {
+    src: "https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dn-14/dn-14-cover.JPG",
+    href: "/page/14",
+    altText:
+      "Colorful book cover with the words Check it out Channa! and drawing of a dog.",
+    bookNumber: 14,
+    bookTitle: "Check it out, Channa!",
   },
 ];
