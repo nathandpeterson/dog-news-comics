@@ -111,4 +111,12 @@ export const cardData = [
     bookNumber: 14,
     bookTitle: "Check it out, Channa!",
   },
+  {
+    src: "https://pub-d5040c5e154b42b1b0c92c01d2202bfe.r2.dev/dn-15/dn-15-cover.JPG",
+    href: "/page/15",
+    altText:
+      "Colorful book cover with the words Zoom Around Ziggy! and drawing of a cat.",
+    bookNumber: 15,
+    bookTitle: "Zoom Around, Ziggy!",
+  },
 ];

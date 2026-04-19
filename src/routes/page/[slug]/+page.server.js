@@ -83,6 +83,12 @@ export async function load({ params: { slug } }) {
       `${BASE_URL}/dn-14/dn-14-05.JPG`,
       `${BASE_URL}/dn-14/dn-14-06.JPG`,
     ],
+    15: [
+      `${BASE_URL}/dn-15/dn-15-01.JPG`,
+      `${BASE_URL}/dn-15/dn-15-02.JPG`,
+      `${BASE_URL}/dn-15/dn-15-03.JPG`,
+      `${BASE_URL}/dn-15/dn-15-04.JPG`,
+    ],
   };
 
   const pages = issues[slug];
